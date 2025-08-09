@@ -1,0 +1,592 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+.container{ 
+    width: 88%;
+    margin: 0 auto; 
+}
+:root{
+    --transion:0.3s; 
+    --greyColor:#545454;
+}
+/*Start nav*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.nav-logo{
+    width:140px;
+    height: 38px;
+    cursor: pointer;
+}
+.middle-nav{
+    display: flex;
+    gap:30px;
+}
+.middle-nav a{
+    color: var(--greyColor);
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup-butn{
+    padding: 12px 35px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transion);
+}
+
+.middle-nav a:hover {
+    color: black;
+}
+.signup-butn:hover{
+    background-color: #333;
+    transform: scale(1.05);
+}
+/*media query nav*/
+/*End nav*/
+
+/*Start home*/
+.home{
+    display: flex;
+    flex-direction: column;
+    padding: 85px 0;
+    gap:20px;
+}
+/*Home Upper Section*/
+.home .upper-home{
+    display: flex;
+    justify-content: space-between;
+}
+.upper-home .home-text{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.upper-home .home-text h1{
+    font-size: 100px;
+}
+.upper-home .home-text p{
+    font-size: 20px;
+    color: var(--greyColor);
+    max-width: 40rem;
+}
+.upper-home .text-img{
+    width:400px;
+    height: 338px;
+}
+
+/*Home Lower Section*/
+.home .lower-home{
+    display: flex;
+    gap:80px;
+}
+
+/*Home Lower Right Section*/
+.lower-home .lower-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Prevents stretching. Keeps children at their content width */
+    gap: 140px; 
+}
+.lower-right .project-butn{
+    padding: 18px 70px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transion);
+}
+.project-butn:hover{
+    background-color: #333;
+    transform: scale(1.05);
+}
+.lower-right .stats {
+    display: flex;
+    gap:70px;
+    color: var(--greyColor);
+}
+.lower-right .stats div p{
+    font-size: 50px;
+}
+.lower-right .stats span{
+    font-size: 15px;
+}
+
+/*Home Lower Left Section*/
+.lower-home .lower-left{
+    position: relative;
+    display: inline-block;
+}
+.lower-left .square-outline{
+    position: absolute;
+    width: 180px;
+    height: 160px;
+    top: -25px;  
+    left: -20px; 
+    border: 2px solid black;
+    border-radius: 5px;
+    background: transparent;
+    z-index: -1;
+}
+.lower-left img{
+    width:560px;
+    height: 356px;
+}
+
+.lower-left i {
+    position: absolute;
+    bottom: 5px;
+    right:-65px;
+    margin: 0 10px;
+    background-color:black;
+    color: white;
+    width:120px;
+    height: 120px;
+    font-size: 40px; 
+    text-align: center;/* to center the icon*/
+    line-height: 120px; /*same as the height you have it will be in the middle exactly*/  
+}
+/*media query Home*/
+
+/*End Home*/
+
+
+/*Start Service*/
+.service{
+    padding: 65px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap:80px;
+}
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.service-header .line{
+    display: inline-block; /*Treat this element like text (inline), but allow it to have width, height, margins, and padding like a block.*/
+    width: 70px;     /* length of the line */
+    height: 2px;     /* thickness */
+    background-color: black;
+}
+.service-header h2 {
+    font-size: 48px;
+    font-weight: 600;
+}
+.design-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.design-container .design-card{
+    display: flex;
+    gap: 10px;
+    transition: var(--transion);
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px; 
+}
+.design-card:hover{
+    transform: translateY(-7px);
+    background-color: rgb(241, 239, 239);
+}
+.design-card img {
+    width: 62px; 
+    height: 60px;     
+}
+.design-card .text-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap:20px;
+}
+.design-card h3{
+    font-size: 20px;
+}
+.design-card p{
+    font-size: 17px;
+    color: var(--greyColor);
+    max-width: 300px;
+}
+
+/*media query Service*/
+/*End Service*/
+
+/*Start Design*/
+.design{
+    display: flex;
+    gap:100px;
+    padding:50px 0px 80px 0px;
+}
+.design img{
+    width:550px;
+    height: 550px;
+}
+
+.design-left{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.design .design-left h2{
+    font-size: 48px;
+    font-weight: 600;
+}
+.design .design-left p{
+    color: var(--greyColor);
+    font-size: 17px;
+}
+
+.accordion-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-item span {
+    font-weight: 600;
+}
+.accordion-item button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: var(--transion);
+}
+.accordion-item button:hover{
+    color:var(--greyColor)
+}
+.design-left .learn-butn{
+    padding: 18px 60px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: var(--transion);
+    align-self: flex-start; /* Prevents stretching. Keeps children at their content width */
+}
+.learn-butn:hover{
+    background-color: #333;
+    transform: scale(1.05);
+}
+/*media query Design*/
+/*End Design*/
+
+/*Start Steps*/
+
+.steps{
+    display: flex;
+    padding:70px 0px 80px 0px;
+    gap: 30px;
+}
+.steps img{
+    width:500px;
+    height: 610px;
+}
+.steps-right{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.steps-right h2{
+    font-size: 48px;
+    font-weight: 600;  
+}
+.steps-container .step{
+    display: flex;
+    gap:40px;
+    align-items: center;
+    cursor: pointer;
+}
+.step .icon-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    margin-top: 10px; /*same as gap in icon-column*/
+}
+.rocket, .checkmark, .lightbulb {
+    display: inline-block;
+    background-color: white; 
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 24px;
+    height: 24px;
+}
+.rocket {
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m7.75 13.85l2.4 2.4m-2.4-2.4s1.417-3.542 3.434-6m-3.434 6c-5.219-1.305-.53-6 3.434-6m-1.034 8.4s3.542-1.417 6-3.434m-6 3.434c1.305 5.218 6 .53 6-3.434M11.184 7.85c2.04-2.486 5.403-3.6 8.566-3.6c0 3.163-1.114 6.525-3.6 8.566m-1.7-3.359l.707-.707m-9.638 7.826c-.952.801-1.269 3.179-1.269 3.179s2.372-.318 3.171-1.272c.45-.534.444-1.354-.057-1.85a1.394 1.394 0 0 0-1.845-.057'/%3E%3C/svg%3E");
+}
+.checkmark{
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' d='m14 21.414l-5-5.001L10.413 15L14 18.586L21.585 11L23 12.415z'/%3E%3Cpath fill='%23000' d='M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2m0 26a12 12 0 1 1 12-12a12 12 0 0 1-12 12'/%3E%3C/svg%3E");
+}
+.lightbulb{
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M14.5 19.5h-5m5 0c0-.713 0-1.07.038-1.307c.123-.763.144-.812.631-1.412c.151-.186.711-.688 1.832-1.692A7.5 7.5 0 1 0 7 15.09c1.12 1.004 1.68 1.505 1.832 1.692c.487.6.508.649.63 1.412c.039.237.039.593.039 1.307m5 0c0 .935 0 1.402-.201 1.75a1.5 1.5 0 0 1-.549.549c-.349.2-.816.2-1.751.2s-1.402 0-1.75-.201a1.5 1.5 0 0 1-.549-.549c-.201-.348-.201-.815-.201-1.75'/%3E%3Cpath stroke-linecap='round' d='M12 17v-2m1.732-1a2 2 0 0 1-3.464 0'/%3E%3C/g%3E%3C/svg%3E");
+}
+.vertical-line {
+    width: 1px;              /* thin vertical line */
+    height: 80px;            /* length of line between icons */
+    background-color: #9B9B9B;
+}
+.transparent{
+    background-color: transparent;
+}
+.step .step-content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.step .step-content h3{
+    font-size: 22px;
+}
+.step .step-content p{
+    color: var(--greyColor);
+    font-size: 18px;
+}
+
+/*media query Steps*/
+/*End Steps*/
+
+/*Start Customer Review*/
+.review{
+    display:flex;
+    padding:70px 0px 80px 0px;
+    gap:80px;
+    position: relative;
+}
+.review-left{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.review-image img{
+    width:550px;
+    height: 550px;
+}
+.review-content{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.review-content h2{
+    font-size: 48px;
+    font-weight: 600;  
+}
+.review-cards{
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    gap:20px;
+    position: absolute;
+    bottom: 60px;
+    right:0;
+    border-radius: 3px;
+}
+.review-cards .review-card{
+    background-color: #1F1F1F;
+    color: white;
+    padding: 30px;
+    width: 470px;
+    height: 470px;
+    border-radius: 5px;
+}
+.review-card .quote-icon{
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 1; /*The height of each line of text will be equal to exactly 1 × the font size.*/
+}
+.review-card p{
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 62px;
+}
+.review-card .profile{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+.profile .profile-content{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.profile-content strong{
+    font-size: 18px;
+
+}
+.profile-content span{
+    color: #929292;
+}
+.review-btns i{
+    margin: 0 10px;
+    background-color:#F1F1F1;
+    color: #464646;
+    width:55px;
+    height: 55px;
+    font-size: 25px; 
+    text-align: center;/* to center the icon*/
+    line-height: 55px; /*same as the height you have it will be in the middle exactly*/
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transion);  
+}
+.review-btns i:hover{
+    background-color:#333;
+    color: white;
+    transform: scale(1.05);
+}
+/*media query  Review*/
+/*End Customer Review*/
+
+/*Start NewsLetter*/
+.newsletter {
+    padding:70px 0px 80px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:80px;
+    
+}
+.newsletter .newsletter-text{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    max-width: 650px; /*max-width just sets the maximum size — without centering rules, the element will stay aligned to the left by default.*/
+    margin: 0 auto; /* centers the box */
+}
+.newsletter-text h2{
+    font-size: 48px;
+    font-weight: 600;  
+}
+.newsletter-text p{
+    color:var(--greyColor);
+    font-size: 24px;
+}
+.newsletter-form {
+  display: inline-flex;/*doesn’t take the full width; it only takes as much space as its content needs*/
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  align-self: center; /* Prevents stretching. Keeps children at their content width */
+}
+.newsletter-form i{
+    font-size: 20px; 
+    color: var(--greyColor);
+    padding: 0 12px;
+    align-self: center;
+}
+.newsletter-form input {
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  outline: none;
+  width: 460px;
+}
+.newsletter-form button {
+  background: black;
+  color: white;
+  padding: 0 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*media query NewsLetter*/
+/*End NewsLetter*/ 
+
+/*Start Footer*/
+footer {
+  background-color: #1F1F1F; 
+  color: white; 
+  display: flex;
+  justify-content: space-between;
+  padding: 150px 80px 40px 80px;
+  font-size: 14px;
+}
+.footer-column {
+  flex: 1;
+  margin-right: 30px;
+  min-width: 180px;
+}
+.footer-column:last-child {
+  margin-right: 0;
+}
+.footer-column img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+.footer-column p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 220px;
+  color: #D1D1D1;
+}
+.footer-column h4 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: white;
+}
+.footer-column a {
+  display: block;
+  color: #D1D1D1;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+  font-weight: 400;
+  font-size: 14px;
+}
+.footer-column a:hover {
+  color: #fff;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+.social-icons a {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 14px;
+}
+.social-icons a:hover {
+  background-color: #555;
+}
+/*media query Footer*/
+/*End Footer*/
