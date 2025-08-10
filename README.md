@@ -6,8 +6,7 @@ A modern and fully responsive **Interior Design** website showcasing elegant ser
 
 ## 🚀 Live Demo
 
-🔗 [🌐](https://somayatamer.github.io/Interior-Design/)
-
+🔗 [View Live](https://somayatamer.github.io/Interior-Design/)
 ---
 
 ## 🧰 Tech Stack
