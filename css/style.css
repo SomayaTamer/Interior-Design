@@ -52,7 +52,45 @@ nav{
     background-color: #333;
     transform: scale(1.05);
 }
+#menu-icon{
+    display: none;
+}
 /*media query nav*/
+@media (max-width:768px) {
+    .nav-logo{
+        width:100px;
+        height: 27px;
+    }
+    #menu-icon{
+        cursor: pointer;
+        display: block;
+    }
+    .middle-nav{
+        display: none;
+    }
+    .middle-nav.show{
+        display: flex;
+        flex-direction: column;
+        background:#1F1F1F;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+        text-align: center;
+    }
+    .middle-nav a{
+        color:#D1D1D1;
+    }
+    .middle-nav a:hover {
+        color: #fff;
+    }
+    .signup-butn{
+        padding: 9px 20px;
+        font-size: 13px;
+    }
+}
 /*End nav*/
 
 /*Start home*/
@@ -117,6 +155,7 @@ nav{
     display: flex;
     gap:70px;
     color: var(--greyColor);
+    text-align: center;
 }
 .lower-right .stats div p{
     font-size: 50px;
@@ -128,7 +167,9 @@ nav{
 /*Home Lower Left Section*/
 .lower-home .lower-left{
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; /* so it doesn’t overflow */
 }
 .lower-left .square-outline{
     position: absolute;
@@ -142,14 +183,15 @@ nav{
     z-index: -1;
 }
 .lower-left img{
-    width:560px;
-    height: 356px;
+    width:90%;
+    height: auto;
+    display: block;
 }
 
 .lower-left i {
     position: absolute;
-    bottom: 5px;
-    right:-65px;
+    bottom: 0;
+    right:-20px;
     margin: 0 10px;
     background-color:black;
     color: white;
@@ -160,7 +202,74 @@ nav{
     line-height: 120px; /*same as the height you have it will be in the middle exactly*/  
 }
 /*media query Home*/
-
+@media (max-width:768px) { 
+    .home{
+        padding: 35px 0 55px 0;
+    }
+    /*Home Upper Section*/
+    .home .upper-home{
+        flex-direction: column;
+        gap:30px;
+        align-items: center;
+    }
+    .upper-home .home-text{
+        gap:30px;
+    }
+    .upper-home .home-text h1{
+        font-size: 65px;
+    }
+    .upper-home .home-text p{
+        font-size: 20px;
+    }
+    .upper-home .text-img{
+        width:200px;
+        height: 169px;
+    }
+    /*Home Lower Section*/
+    .home .lower-home{
+        flex-direction: column;
+        gap:50px;
+    }
+    /*Home Lower Right Section*/
+    .lower-home .lower-right {
+        gap: 40px;
+        align-items: center; 
+    }
+    .lower-right .project-butn{
+        padding: 15px 53px;
+    }
+    .lower-right .stats {
+        gap:20px;
+    }
+    .lower-right .stats div p{
+        font-size: 35px;
+    }
+    .lower-right .stats span{
+        font-size: 14px;
+    }
+    /*Home Lower Left Section*/
+    .lower-left{
+        justify-content: center;
+        align-items: center;
+    }
+    .lower-left .square-outline{
+        width: 80px;
+        height: 60px;
+        top: -15px;
+        left: 65px;
+    }
+    .lower-left img{
+        width:60%;
+    }
+    .lower-left i {
+        right:40px;
+        margin: 0 10px;
+        width:70px;
+        height: 70px;
+        font-size: 20px; 
+        line-height: 70px; /*same as the height you have it will be in the middle exactly*/  
+    }    
+}
 /*End Home*/
 
 
@@ -190,7 +299,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 20px; 
 }
 .design-container .design-card{
     display: flex;
@@ -224,6 +333,39 @@ nav{
 }
 
 /*media query Service*/
+@media (max-width:768px) { 
+    .service{
+        gap:40px;
+    }
+    .service-header {
+        gap: 10px;
+    }
+    .service-header .line{
+        width: 35px;     /* length of the line */
+    }
+    .service-header h2 {
+        font-size: 34px;
+    }
+    .design-container{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .design-card{
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .design-card img {
+        width: 52px; 
+        height: 50px;  
+    }
+    .design-card h3{
+        font-size: 25px;
+    }
+    .design-card p{
+        font-size: 20px;
+    }    
+}
 /*End Service*/
 
 /*Start Design*/
@@ -288,6 +430,33 @@ nav{
     transform: scale(1.05);
 }
 /*media query Design*/
+@media (max-width:768px) { 
+    .design{
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+    }
+    .design img{
+        width:250px;
+        height: 250px;
+    }
+    .design-left{
+        gap:25px;
+    }
+    .design .design-left h2{
+        font-size: 34px;
+    }
+    .design .design-left p{
+        font-size: 20px;
+    }
+    .accordion-item button {
+        font-size: 25px;
+    }
+    .design-left .learn-butn{
+        padding: 15px 53px;
+        align-self: center;
+    }
+}
 /*End Design*/
 
 /*Start Steps*/
@@ -375,6 +544,43 @@ nav{
 }
 
 /*media query Steps*/
+@media (max-width:768px) { 
+    .steps{
+        flex-direction: column;
+    }
+    .steps img{
+        display: none;
+    }
+    .steps-right{
+        gap:20px;
+    }
+    .steps-right h2{
+        font-size: 34px;
+    }
+    .steps-container .step{
+        gap:25px;
+    }
+    .icon-wrapper {
+        width: 45px;
+        height: 45px;
+    }
+    .rocket, .checkmark, .lightbulb {
+        width: 22px;
+        height: 22px;
+    }
+    .vertical-line {
+        height: 50px;            /* length of line between icons */
+    }
+    .step .step-content{
+        gap:15px;
+    }
+    .step .step-content h3{
+        font-size: 25px;
+    }
+    .step .step-content p{
+        font-size: 18px;
+    }
+}
 /*End Steps*/
 
 /*Start Customer Review*/
@@ -466,97 +672,196 @@ nav{
     transform: scale(1.05);
 }
 /*media query  Review*/
+@media (max-width:768px) { 
+    .review{
+        flex-direction: column;
+        gap:30px;
+    }
+    .review-left{
+        gap:30px;
+        align-items: center;
+    }
+    .review-image img{
+        width:250px;
+        height: 250px;
+    }
+    .review-content{
+        gap: 80px;
+    }
+    .review-content h2{
+        font-size: 34px;
+    }
+    .review-cards{
+        flex-direction: column;
+        background-color:transparent;
+        gap:20px;
+        position:relative;
+        align-items: center;
+    }
+    .review-cards .review-card{
+        padding: 20px;
+        width: 310px;
+        height: 310px;
+    }
+    .review-card .quote-icon{
+        font-size: 70px;
+    }
+    .review-card p{
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    .review-card .profile{
+        gap:20px;
+    }
+    .profile img{
+        width: 50px;
+        height: auto;
+    }
+    .profile .profile-content{
+        gap:10px;
+    }
+    .profile-content strong{
+        font-size: 14px;
+    }
+    .profile-content span{
+        font-size: 12px;
+    }
+    .review-btns i{
+        width:45px;
+        height: 45px;
+        font-size: 25px; 
+        line-height: 45px; /*same as the height you have it will be in the middle exactly*/
+    }
+}
 /*End Customer Review*/
 
-/*Start NewsLetter*/
+/*Start NewsLetter*/ 
 .newsletter {
-    padding:70px 0px 80px 0px;
+    padding: 70px 0 80px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap:80px;
-    
+    gap: 80px;
 }
-.newsletter .newsletter-text{
+
+.newsletter .newsletter-text {
     display: flex;
     flex-direction: column;
-    gap:40px;
-    max-width: 650px; /*max-width just sets the maximum size — without centering rules, the element will stay aligned to the left by default.*/
-    margin: 0 auto; /* centers the box */
+    gap: 40px;
+    max-width: 650px;
+    margin: 0 auto;
 }
-.newsletter-text h2{
+
+.newsletter-text h2 {
     font-size: 48px;
-    font-weight: 600;  
+    font-weight: 600;
 }
-.newsletter-text p{
-    color:var(--greyColor);
+
+.newsletter-text p {
+    color: var(--greyColor);
     font-size: 24px;
 }
+
 .newsletter-form {
-  display: inline-flex;/*doesn’t take the full width; it only takes as much space as its content needs*/
-  background: white;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-  align-self: center; /* Prevents stretching. Keeps children at their content width */
+    display: inline-flex;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    align-self: center;
 }
-.newsletter-form i{
-    font-size: 20px; 
+
+.newsletter-form i {
+    font-size: 20px;
     color: var(--greyColor);
     padding: 0 12px;
     align-self: center;
 }
-.newsletter-form input {
-  border: none;
-  padding: 15px 20px;
-  font-size: 16px;
-  outline: none;
-  width: 460px;
-}
-.newsletter-form button {
-  background: black;
-  color: white;
-  padding: 0 25px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-}
-/*media query NewsLetter*/
-/*End NewsLetter*/ 
 
-/*Start Footer*/
+.newsletter-form input {
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    outline: none;
+    width: 460px;
+}
+
+.newsletter-form button {
+    background: black;
+    color: white;
+    padding: 0 25px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+/*media query NewsLetter*/ 
+@media (max-width: 768px) {
+    .newsletter {
+        gap: 50px;
+        padding: 50px 20px;
+    }
+    .newsletter-text h2 {
+        font-size: 28px;
+    }
+    .newsletter-text p {
+        font-size: 18px;
+    }
+    .newsletter-form {
+        flex-direction: column; 
+        width: 100%;
+        max-width: 400px;
+    }
+    .form-up{
+        display: flex;
+    }
+    .newsletter-form input {
+        width: 100%;
+        padding: 12px;
+    }
+    .newsletter-form button {
+        padding: 12px;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/*End NewsLetter*/ 
+/*Start Footer*/ 
 footer {
   background-color: #1F1F1F; 
   color: white; 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; 
   padding: 150px 80px 40px 80px;
   font-size: 14px;
+  gap: 40px; /* space between columns when wrapped */
 }
+
 .footer-column {
   flex: 1;
-  margin-right: 30px;
   min-width: 180px;
 }
-.footer-column:last-child {
-  margin-right: 0;
-}
+
 .footer-column img {
   width: 120px;
   margin-bottom: 20px;
 }
+
 .footer-column p {
   line-height: 1.6;
   margin-bottom: 20px;
   max-width: 220px;
   color: #D1D1D1;
 }
+
 .footer-column h4 {
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 15px;
   color: white;
 }
+
 .footer-column a {
   display: block;
   color: #D1D1D1;
@@ -566,13 +871,16 @@ footer {
   font-weight: 400;
   font-size: 14px;
 }
+
 .footer-column a:hover {
   color: #fff;
 }
+
 .social-icons {
   display: flex;
   gap: 15px;
 }
+
 .social-icons a {
   display: inline-block;
   background-color: #333;
@@ -585,8 +893,24 @@ footer {
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 14px;
 }
+
 .social-icons a:hover {
   background-color: #555;
 }
+
 /*media query Footer*/
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 20px 30px 20px;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  .footer-column p,
+  .footer-column a {
+    max-width: 100%;
+  }
+}
 /*End Footer*/
